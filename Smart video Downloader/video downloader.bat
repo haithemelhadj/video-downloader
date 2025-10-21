@@ -46,8 +46,6 @@ set /p OUTPUT_DIR=Enter output folder [Default: %DEFAULT_OUTPUT_DIR%]:
 if "%OUTPUT_DIR%"=="" set OUTPUT_DIR=%DEFAULT_OUTPUT_DIR%
 echo.
 
-echo pausing 1
-pause
 
 ::----------------------------------
 :: --- Set FFmpeg path relative to batch if not provided ---
@@ -62,18 +60,16 @@ if not exist "%FFMPEG_PATH%\ffmpeg.exe" (
     exit /b
 )
 
+::------------------*
 echo pausing 1.1
 pause
 
-::------------------*
-::set /p FFMPEG_PATH=Enter ffmpeg\bin folder [Default: %DEFAULT_FFMPEG_PATH%]: 
-::if "%FFMPEG_PATH%"=="" set FFMPEG_PATH=%DEFAULT_FFMPEG_PATH%
-::echo.
 ::------------------------------------
 :: --- Detect if URL is a playlist automatically ---
 echo Detecting playlist or single video...
 echo.
-echo %VIDEO_URL% | find /I "list=" >nul
+::echo %VIDEO_URL% | find /I "list=" >nul
+echo "!VIDEO_URL!" | find /I "list=" >nul
 if %errorlevel%==0 (
     set IS_PLAYLIST=true
     set PLAYLIST_FLAG=--yes-playlist
