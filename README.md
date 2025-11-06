@@ -1,9 +1,6 @@
-============================================================
-                SMART YOUTUBE VIDEO DOWNLOADER
-                     (SYVD Bundle)
-============================================================
 
-Version: 1.0
+##  SMART YOUTUBE VIDEO DOWNLOADER
+
 Author: [Kuruttakao]
 Date: 2025-10-21
 
