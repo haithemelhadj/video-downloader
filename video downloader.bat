@@ -61,8 +61,7 @@ if not exist "%FFMPEG_PATH%\ffmpeg.exe" (
 )
 
 ::------------------*
-echo pausing 1.1
-pause
+
 
 ::------------------------------------
 :: --- Detect if URL is a playlist automatically ---
@@ -81,8 +80,6 @@ if %errorlevel%==0 (
 )
 echo.
 
-echo pausing 1.2
-pause
 
 :: --- Determine format flags ---
 if /I "%FORMAT%"=="mp3" (
@@ -92,8 +89,7 @@ if /I "%FORMAT%"=="mp3" (
 )
 
 
-echo pausing 2
-pause
+
 
 :: --- Build output template ---
 if /I "!IS_PLAYLIST!"=="true" (
